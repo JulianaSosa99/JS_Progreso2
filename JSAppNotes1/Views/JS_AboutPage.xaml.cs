@@ -1,7 +1,7 @@
 
 
 
-namespace JSAppNotes1;
+namespace JSAppNotes1.Views;
 
 public partial class JS_AboutPage : ContentPage
 {

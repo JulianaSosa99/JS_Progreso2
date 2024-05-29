@@ -70,10 +70,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="JS_AboutPage.xaml">
+	  <MauiXaml Update="Views\JS_AboutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="JS_NotePage.xaml">
+	  <MauiXaml Update="Views\JS_NotePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
