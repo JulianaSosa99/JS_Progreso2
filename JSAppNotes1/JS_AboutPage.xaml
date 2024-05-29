@@ -13,6 +13,6 @@
         </HorizontalStackLayout>
 
         <Label Text="Juliana Sosa" />
-        <Button Text="JS_Mas informacion" Clicked="JS_Click_Boton" />
+        <Button Text="JS_Mas informacion" Clicked="LearnMore_Clicked" />
     </VerticalStackLayout>
 </ContentPage>
