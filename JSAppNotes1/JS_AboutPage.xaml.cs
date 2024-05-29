@@ -1,5 +1,6 @@
 
 
+
 namespace JSAppNotes1;
 
 public partial class JS_AboutPage : ContentPage
@@ -9,10 +10,12 @@ public partial class JS_AboutPage : ContentPage
 		InitializeComponent();
 	}
 
- 
-    private async Task LearnMore_ClickedAsync(object sender, EventArgs e)
-    {
 
-        await Launcher.Default.OpenAsync("https://educacionvirtual.udla.edu.ec/");
+
+
+    private async void LearnMore_Clicked(object sender, EventArgs e)
+    {
+        // Navigate to the specified URL in the system browser.
+        await Launcher.Default.OpenAsync("https://aka.ms/maui");
     }
 }
