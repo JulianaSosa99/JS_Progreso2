@@ -1,4 +1,5 @@
 
+
 namespace JSAppNotes1;
 
 public partial class JS_AboutPage : ContentPage
@@ -9,7 +10,7 @@ public partial class JS_AboutPage : ContentPage
 	}
 
  
-    private void LearnMore_Clicked(object sender, EventArgs e)
+    private async Task LearnMore_ClickedAsync(object sender, EventArgs e)
     {
 
         await Launcher.Default.OpenAsync("https://educacionvirtual.udla.edu.ec/");
