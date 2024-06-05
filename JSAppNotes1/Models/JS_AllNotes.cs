@@ -4,8 +4,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using static Android.Provider.ContactsContract.CommonDataKinds;
-
 namespace JSAppNotes1.Models;
 
 internal class JS_AllNotes
@@ -31,8 +29,8 @@ internal class JS_AllNotes
                                     // Each file name is used to create a new Note
                                     .Select(filename => new JS_Note()
                                     {
-                                        JS_Filename = filename,
-                                        JS_Text = File.ReadAllText(filename),
+                                        Filename = filename,
+                                        JSText = File.ReadAllText(filename),
                                         Date = File.GetLastWriteTime(filename)
                                     })
 

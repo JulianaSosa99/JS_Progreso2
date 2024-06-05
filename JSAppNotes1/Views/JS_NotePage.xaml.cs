@@ -4,7 +4,7 @@ namespace JSAppNotes1.Views;
 [QueryProperty(nameof(ItemId), nameof(ItemId))]
 public partial class JS_NotePage : ContentPage
 {
-  //  string _fileName = Path.Combine(FileSystem.AppDataDirectory, "notes.txt");
+   string _fileName = Path.Combine(FileSystem.AppDataDirectory, "notes.txt");
     public JS_NotePage()
 	{
 		InitializeComponent();
@@ -24,12 +24,12 @@ public partial class JS_NotePage : ContentPage
     private void LoadNote(string fileName)
     {
         Models.JS_Note noteModel = new Models.JS_Note();
-        noteModel.JS_Filename = fileName;
+        noteModel.Filename = fileName;
 
         if (File.Exists(fileName))
         {
             noteModel.Date = File.GetCreationTime(fileName);
-            noteModel.JS_Text = File.ReadAllText(fileName);
+            noteModel.JSText = File.ReadAllText(fileName);
         }
 
         BindingContext = noteModel;
@@ -44,7 +44,7 @@ public partial class JS_NotePage : ContentPage
     private async void SaveButton_Clicked(object sender, EventArgs e)
     {
         if (BindingContext is Models.JS_Note note)
-            File.WriteAllText(note.JS_Filename, TextEditor.Text);
+            File.WriteAllText(note.Filename, TextEditor.Text);
 
         await Shell.Current.GoToAsync("..");
     }
@@ -54,8 +54,8 @@ public partial class JS_NotePage : ContentPage
         if (BindingContext is Models.JS_Note note)
         {
             // Delete the file.
-            if (File.Exists(note.JS_Filename))
-                File.Delete(note.JS_Filename);
+            if (File.Exists(note.Filename))
+                File.Delete(note.Filename);
         }
 
         await Shell.Current.GoToAsync("..");
